@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Professional Navy & Gold --><!-- Application Structure Plan: A single-page application with a fixed top navigation to allow busy court officials to quickly jump to key sections. The structure is thematic: 'Início' for a strong first impression, 'Sobre' for credibility, 'Diferenciais' for value proposition, 'Método' for process transparency, 'Casos de Sucesso' for an interactive gallery, and 'Documentos' for downloadable assets. The documents section has been expanded to include additional sample reports. --><!-- Visualization & Content Choices: 1. Documents -> Provide Downloads -> Icon-based cards -> Button click -> Professional way to share CV and multiple sample reports (Laudos 1, 2, and 3). --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><style>
+    <style>
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #F7F9FC;
@@ -19,51 +19,19 @@
         .text-gold { color: #d4af37; }
         .border-gold { border-color: #d4af37; }
         .bg-gold { background-color: #d4af37; }
-        .nav-link {
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: #d4af37;
-        }
-        .active-link {
-            color: #d4af37;
-            border-bottom: 2px solid #d4af37;
-        }
-        .gallery-item img {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        .modal-backdrop {
-            background-color: rgba(0, 0, 0, 0.75);
-        }
+        .nav-link { transition: color 0.3s ease; }
+        .nav-link:hover { color: #d4af37; }
+        .active-link { color: #d4af37; border-bottom: 2px solid #d4af37; }
+        .gallery-item img { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-item:hover img { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .modal-backdrop { background-color: rgba(0, 0, 0, 0.75); }
         @media print {
-            header, footer, #gallery-filters, #casos .gallery-item, #documentos {
-                display: none;
-            }
-            body {
-                font-size: 12pt;
-                color: #000;
-            }
-            section {
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                page-break-after: always;
-            }
-            #inicio {
-                padding-top: 0;
-            }
-            .bg-navy, .bg-slate-100 {
-                background-color: #fff !important;
-            }
-            .text-white, .text-gold, .text-navy {
-                color: #000 !important;
-            }
-            h3 {
-                padding-bottom: 1rem;
-            }
+            header, footer, #gallery-filters, #casos .gallery-item, #documentos { display: none; }
+            body { font-size: 12pt; color: #000; }
+            section { padding-top: 2rem; padding-bottom: 2rem; page-break-after: always; }
+            #inicio { padding-top: 0; }
+            .bg-navy, .bg-slate-100 { background-color: #fff !important; }
+            .text-white, .text-gold, .text-navy { color: #000 !important; }
         }
     </style>
 </head>
@@ -101,10 +69,7 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-5xl font-bold">Bruno Gomes dos Santos</h2>
                 <p class="text-xl md:text-2xl mt-2 text-gold">Perito Contábil Trabalhista – CRC 1SP 338.009/O-5</p>
-                <p class="mt-4 max-w-3xl mx-auto">Atuação especializada em Cálculos Trabalhistas e Liquidação Judicial para as Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
-                <div class="mt-8 flex justify-center items-center gap-4">
-                     <p class="text-2xl font-bold italic">"Precisão Contábil, Excelência em Justiça."</p>
-                </div>
+                <p class="mt-4 max-w-3xl mx-auto italic">"Precisão Contábil, Excelência em Justiça."</p>
             </div>
         </section>
 
@@ -112,258 +77,101 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-5 gap-12 items-center">
                     <div class="md:col-span-2">
-                        <img src="images/profile.jpeg" alt="Bruno Gomes dos Santos" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm">
+                        <img src="images/profile.jpeg" alt="Bruno Gomes" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm">
                     </div>
-                    <div class="md:col-span-3">
+                    <div class="md:col-span-3 text-justify">
                         <h3 class="text-3xl font-bold mb-4 text-navy">Credenciais e História</h3>
                         <p class="mb-4">Sou perito contábil trabalhista, graduado e pós-graduado em perícia e auditoria pela Universidade São Judas. Atuo como perito nomeado nas regiões da Justiça do Trabalho do TRT 5ª, 6ª e 17ª desde 2021, com expertise desenvolvida em mais de 2.000 laudos periciais desde 2013.</p>
-                        <p class="mb-4">Minha trajetória nasceu da prática em escritórios de perícia, onde vivenciei a importância da precisão contábil. Tive a honra de aprender com mestres como Renato Otero, John Hiroshi Iano, Kleber Buratiero e Rafael Baldivia, de quem absorvi valores de responsabilidade, ética e domínio técnico.</p>
+                        <p class="mb-4 text-gray-700">Minha trajetória nasceu da prática, onde vivenciei a importância da precisão contábil ao lado de mestres da perícia como Renato Otero e Rafael Baldivia.</p>
                         <p>Meu compromisso é entregar laudos objetivos, fundamentados e precisos, sempre com observância ao julgado e à necessidade do MM. Juízo.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="diferenciais" class="py-16 bg-slate-100">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-3xl font-bold mb-10 text-navy">Promessa e Benefícios</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Autoridade Técnica</h4>
-                        <p>Grande volume de elogios e especialização em casos de alta complexidade (Correios, grandes bancos) envolvendo horas extras, diferenças salariais e PLR.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Agilidade e Pontualidade</h4>
-                        <p>Todas as perícias são concluídas e entregues em até 30 dias, sem exceção, garantindo respeito ao tempo processual do juízo.</p>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Segurança e Clareza</h4>
-                        <p>Padronização técnica, redação clara, resposta precisa aos quesitos e total cumprimento dos parâmetros da Vara, proporcionando segurança e transparência.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="metodo" class="py-16">
+        <section id="documentos" class="py-16 bg-slate-100">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-10 text-navy">Método de Trabalho – ALERR</h3>
-                <p class="text-center max-w-3xl mx-auto mb-12">Meu processo é minucioso, técnico e orientado para a excelência, garantindo a máxima precisão ao juízo através de uma dupla verificação antes da entrega.</p>
-                <div class="relative">
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 -translate-y-1/2"></div>
-                    <div class="grid md:grid-cols-5 gap-8 text-center relative">
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">A</div>
-                            <h4 class="font-bold mt-4">Análise</h4>
-                            <p class="text-sm mt-1">Leitura dos autos, identificação das peças-chave e compreensão do contexto.</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">L</div>
-                            <h4 class="font-bold mt-4">Levantamento</h4>
-                            <p class="text-sm mt-1">Compilação de documentos, recibos, cartões de ponto e informações relevantes.</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">E</div>
-                            <h4 class="font-bold mt-4">Elaboração</h4>
-                            <p class="text-sm mt-1">Planilhamento detalhado, anotação de períodos, convenções e variáveis.</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">R</div>
-                            <h4 class="font-bold mt-4">Revisão</h4>
-                            <p class="text-sm mt-1">Cálculo no PJe-Calc, aplicação de parâmetros e conferência de dados.</p>
-                        </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">R</div>
-                            <h4 class="font-bold mt-4">Revisão Final</h4>
-                            <p class="text-sm mt-1">Dupla verificação dos resultados e coerência jurídica antes da entrega.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="casos" class="py-16 bg-slate-100">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Casos de Sucesso e Provas</h3>
-                <p class="text-center max-w-3xl mx-auto mb-10">A robustez do meu trabalho é comprovada por nomeações em processos envolvendo grandes litigantes nacionais. Explore abaixo alguns exemplos de nomeações, laudos e planilhas.</p>
-                <div id="gallery-filters" class="flex justify-center space-x-2 md:space-x-4 mb-8 flex-wrap">
-                    <button class="filter-btn bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold mb-2">Todos</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Nomeação">Nomeações</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Planilha">Planilhas PJe-Calc</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Laudo">Laudos</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Documento">Documentos</button>
-                </div>
-
-                <div id="gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Documents -->
-        <section id="documentos" class="py-16">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Documentos Disponíveis</h3>
-                <p class="text-center max-w-2xl mx-auto mb-12">Faça o download de materiais complementares para conhecer melhor minha formação e qualidade técnica.</p>
+                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Documentos para Download</h3>
+                <p class="text-center max-w-2xl mx-auto mb-12">Clique nos botões abaixo para visualizar ou descarregar os ficheiros em PDF.</p>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <!-- CV Card -->
+                    <!-- Currículo -->
                     <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                            <span class="text-gold text-xl">📄</span>
-                        </div>
+                        <span class="text-4xl mb-4">📄</span>
                         <h4 class="text-lg font-bold text-navy mb-2">Currículo</h4>
-                        <p class="text-xs text-gray-600 mb-6">Formação académica e histórico profissional completo.</p>
-                        <a href="pdfs/curriculo_bruno_gomes.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                        <a href="images/PDFs/curriculo_bruno_gomes.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
                     </div>
 
-                    <!-- Sample Work Card 1 -->
+                    <!-- Laudo 1 -->
                     <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                            <span class="text-gold text-xl">📋</span>
-                        </div>
+                        <span class="text-4xl mb-4">📋</span>
                         <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 1</h4>
-                        <p class="text-xs text-gray-600 mb-6">Exemplo fundamentado demonstrando o rigor técnico aplicado.</p>
-                        <a href="pdfs/modelo_laudo_pericial.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                        <a href="images/PDFs/modelo_laudo_pericial.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
                     </div>
 
-                    <!-- Sample Work Card 2 -->
+                    <!-- Laudo 2 -->
                     <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                            <span class="text-gold text-xl">📋</span>
-                        </div>
+                        <span class="text-4xl mb-4">📋</span>
                         <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 2</h4>
-                        <p class="text-xs text-gray-600 mb-6">Segunda demonstração de metodologia e análise técnica.</p>
-                        <a href="pdfs/modelo_laudo_pericial_2.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                        <a href="images/PDFs/modelo_laudo_pericial.pdf_2" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
                     </div>
 
-                    <!-- Sample Work Card 3 -->
+                    <!-- Laudo 3 -->
                     <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
-                            <span class="text-gold text-xl">📋</span>
-                        </div>
+                        <span class="text-4xl mb-4">📋</span>
                         <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 3</h4>
-                        <p class="text-xs text-gray-600 mb-6">Terceiro exemplo de peça pericial para consulta.</p>
-                        <a href="pdfs/modelo_laudo_pericial_3.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                        <a href="images/PDFs/modelo_laudo_pericial.pdf_3" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Provas e Nomeações -->
+        <section id="casos" class="py-16">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-10 text-navy">Provas e Nomeações</h3>
+                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-navy text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="font-bold text-xl">Bruno Gomes dos Santos</p>
-            <p class="text-gold">Perito Contábil Trabalhista | CRC 1SP 338.009/O-5</p>
-            <p class="mt-4 text-sm">Disponível para nomeações nas Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
-        </div>
+    <footer class="bg-navy text-white py-8 text-center">
+        <p class="font-bold">Bruno Gomes dos Santos</p>
+        <p class="text-gold text-sm">Perito Contábil Trabalhista | CRC 1SP 338.009/O-5</p>
     </footer>
 
-    <div id="modal" class="hidden fixed inset-0 z-50 overflow-auto modal-backdrop flex items-center justify-center">
-        <div class="bg-white p-4 rounded-lg shadow-2xl max-w-4xl max-h-[90vh] w-full mx-4">
-            <div class="flex justify-between items-center mb-2">
-                <h5 id="modal-caption" class="text-lg font-semibold"></h5>
-                <button id="modal-close" class="text-2xl font-bold">&times;</button>
-            </div>
-            <div class="overflow-auto max-h-[80vh]">
-                <img id="modal-img" src="" alt="Detalhe do documento" class="w-full">
-            </div>
+    <div id="modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-white p-2 rounded-lg max-w-4xl w-full">
+            <div class="flex justify-end"><button id="modal-close" class="text-2xl font-bold p-2">&times;</button></div>
+            <img id="modal-img" src="" class="w-full max-h-[80vh] object-contain">
         </div>
     </div>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const galleryData = [
-                { src: 'images/nomeacao1.png', category: 'Nomeação', caption: 'Nomeação TRT 5ª - Caixa Econômica Federal' },
-                { src: 'images/nomeacao2.png', category: 'Nomeação', caption: 'Designação TRT 5ª - Banco Bradesco S.A.' },
-                { src: 'images/nomeacao3.png', category: 'Nomeação', caption: 'Intimação TRT 5ª - Banco Bradesco S.A.' },
-                { src: 'images/nomeacao4.png', category: 'Nomeação', caption: 'Intimação TRT 5ª - Banco Bradesco S.A. (2)' },
-                { src: 'images/nomeacao5.png', category: 'Nomeação', caption: 'Intimação TRT 5ª - Correios e Telégrafos' },
-                { src: 'images/nomeacao6.png', category: 'Nomeação', caption: 'Intimação TRT 5ª - Banco do Brasil SA' },
-                { src: 'images/nomeacao7.png', category: 'Nomeação', caption: 'Intimação TRT 5ª - Correios e Telégrafos (2)' },
-                { src: 'images/nomeacao8.png', category: 'Nomeação', caption: 'Designação TRT 5ª - Correios e Telégrafos (2)' },
-                { src: 'images/nomeacao9.png', category: 'Nomeação', caption: 'Redesignação de Perícia TRT 5ª' },
-                { src: 'images/nomeacao10.png', category: 'Nomeação', caption: 'Nomeação em Substituição' },
-                { src: 'images/imagem_pje.png', category: 'Planilha', caption: 'Planilha de Cálculo PJe - Correios' },
-                { src: 'images/imagem_pje2.png', category: 'Planilha', caption: 'Planilha de Cálculo PJe - Correios (2)' },
-                { src: 'images/anexo_laudo_pericial.png', category: 'Laudo', caption: 'Anexo de Laudo Pericial - Evolução Salarial' },
-                { src: 'images/anexo_laudo_pericial2.png', category: 'Laudo', caption: 'Anexo de Laudo Pericial - Evolução Salarial (2)' },
-                { src: 'images/cartao_de_ponto.jpg', category: 'Documento', caption: 'Exemplo de Cartão de Ponto Analisado' },
-                { src: 'images/cartao_de_ponto_2.jpg', category: 'Documento', caption: 'Exemplo de Cartão de Ponto Analisado (2)' }
+                { src: 'images/nomeacao1.png', caption: 'Nomeação 1' },
+                { src: 'images/nomeacao2.png', caption: 'Nomeação 2' },
+                { src: 'images/nomeacao3.png', caption: 'Nomeação 3' },
+                { src: 'images/imagem_pje.png', caption: 'Planilha PJe' }
             ];
 
             const gallery = document.getElementById('gallery');
-            const filterBtns = document.querySelectorAll('.filter-btn');
             const modal = document.getElementById('modal');
             const modalImg = document.getElementById('modal-img');
-            const modalCaption = document.getElementById('modal-caption');
             const modalClose = document.getElementById('modal-close');
 
-            const renderGallery = (category) => {
-                gallery.innerHTML = '';
-                const filteredData = category === 'Todos' ? galleryData : galleryData.filter(item => item.category === category);
-                
-                filteredData.forEach(item => {
-                    const galleryItem = document.createElement('div');
-                    galleryItem.className = 'gallery-item cursor-pointer overflow-hidden rounded-lg';
-                    galleryItem.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="w-full h-full object-cover" data-caption="${item.caption}">`;
-                    galleryItem.addEventListener('click', () => openModal(item.src, item.caption));
-                    gallery.appendChild(galleryItem);
-                });
-            };
-
-            const openModal = (src, caption) => {
-                modalImg.src = src;
-                modalCaption.textContent = caption;
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            };
-
-            const closeModal = () => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = '';
-            };
-
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => b.classList.replace('bg-gold', 'bg-white') & b.classList.replace('text-white', 'text-gray-700'));
-                    btn.classList.replace('bg-white', 'bg-gold');
-                    btn.classList.replace('text-gray-700', 'text-white');
-                    renderGallery(btn.dataset.category || 'Todos');
-                });
-            });
-            
-            modalClose.addEventListener('click', closeModal);
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal();
+            galleryData.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'gallery-item cursor-pointer';
+                div.innerHTML = `<img src="${item.src}" class="rounded shadow w-full h-40 object-cover">`;
+                div.onclick = () => { modalImg.src = item.src; modal.classList.remove('hidden'); };
+                gallery.appendChild(div);
             });
 
-            renderGallery('Todos');
-
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('main > section');
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (pageYOffset >= sectionTop - 100) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                navLinks.forEach(link => {
-                    link.classList.remove('active-link');
-                    if(link.getAttribute('href')){
-                        if (link.getAttribute('href').includes(current)) {
-                           link.classList.add('active-link');
-                        }
-                    }
-                });
-            });
+            modalClose.onclick = () => modal.classList.add('hidden');
+            window.onclick = (e) => { if(e.target == modal) modal.classList.add('hidden'); };
         });
     </script>
 </body>
