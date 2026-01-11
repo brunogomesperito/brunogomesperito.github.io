@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Gomes - Perito Contábil Trabalhista</title>
-    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Professional Navy & Gold -->
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #F7F9FC;
             color: #1E293B;
+            scroll-behavior: smooth;
         }
         .bg-navy { background-color: #0d1b2a; }
         .text-gold { color: #d4af37; }
@@ -38,33 +38,22 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .modal-backdrop {
-            background-color: rgba(0, 0, 0, 0.75);
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+        /* Custom scrollbar for PDF iframe container */
+        .pdf-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .pdf-container::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
         }
         @media print {
-            header, footer, #gallery-filters, #casos .gallery-item, #documentos {
+            header, footer, #gallery-filters, #casos .gallery-item, #documentos, #pdf-modal {
                 display: none;
             }
-            body {
-                font-size: 12pt;
-                color: #000;
-            }
-            section {
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                page-break-after: always;
-            }
-            #inicio {
-                padding-top: 0;
-            }
-            .bg-navy, .bg-slate-100 {
-                background-color: #fff !important;
-            }
-            .text-white, .text-gold, .text-navy {
-                color: #000 !important;
-            }
-            h3 {
-                padding-bottom: 1rem;
-            }
+            body { font-size: 12pt; color: #000; }
+            section { padding: 2rem 0; page-break-after: always; }
         }
     </style>
 </head>
@@ -73,7 +62,7 @@
     <header id="header" class="bg-navy text-white p-4 fixed w-full top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#inicio" class="flex items-center">
-                <img src="imagens/logotipo.png" alt="Bruno Gomes Logotipo" class="h-8 md:h-10">
+                <img src="images/logotipo.png" alt="Bruno Gomes Logotipo" class="h-8 md:h-10">
             </a>
             <nav class="hidden md:flex space-x-6">
                 <a href="#inicio" class="nav-link active-link">Início</a>
@@ -98,221 +87,262 @@
     </header>
 
     <main>
-        <section id="inicio" class="pt-24 pb-12 bg-navy text-white text-center">
+        <section id="inicio" class="pt-32 pb-16 bg-navy text-white text-center">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-5xl font-bold">Bruno Gomes dos Santos</h2>
                 <p class="text-xl md:text-2xl mt-2 text-gold">Perito Contábil Trabalhista – CRC 1SP 338.009/O-5</p>
-                <p class="mt-4 max-w-3xl mx-auto italic">"Precisão Contábil, Excelência em Justiça."</p>
-                <p class="mt-2 max-w-3xl mx-auto">Atuação especializada em Cálculos Trabalhistas e Liquidação Judicial para as Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
+                <p class="mt-6 max-w-3xl mx-auto italic text-lg text-gray-300">"Precisão Contábil, Excelência em Justiça."</p>
+                <p class="mt-4 max-w-3xl mx-auto text-gray-400">Atuação especializada em Cálculos Trabalhistas e Liquidação Judicial para as Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
             </div>
         </section>
 
-        <section id="sobre" class="py-16">
+        <section id="sobre" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-5 gap-12 items-center">
                     <div class="md:col-span-2">
-                        <img src="imagens/profile.jpeg" alt="Bruno Gomes" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm">
+                        <img src="images/profile.jpeg" alt="Bruno Gomes" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm">
                     </div>
                     <div class="md:col-span-3 text-justify">
-                        <h3 class="text-3xl font-bold mb-4 text-navy">Credenciais e História</h3>
-                        <p class="mb-4">Sou perito contábil trabalhista, graduado e pós-graduado em perícia e auditoria pela Universidade São Judas. Atuo como perito nomeado nas regiões da Justiça do Trabalho do TRT 5ª, 6ª e 17ª desde 2021, com expertise desenvolvida em mais de 2.000 laudos periciais desde 2013.</p>
-                        <p class="mb-4 text-gray-700">Minha trajetória nasceu da prática em escritórios de perícia, onde vivenciei a importância da precisão contábil. Tive a honra de aprender com mestres como Renato Otero, John Hiroshi Iano, Kleber Buratiero e Rafael Baldivia, de quem absorvi valores de responsabilidade, ética e domínio técnico.</p>
-                        <p>Meu compromisso é entregar laudos objetivos, fundamentados e precisos, sempre com observância ao julgado e à necessidade do MM. Juízo.</p>
+                        <h3 class="text-3xl font-bold mb-6 text-navy">Credenciais e História</h3>
+                        <p class="mb-4 text-lg">Sou perito contábil trabalhista, graduado e pós-graduado em perícia e auditoria pela Universidade São Judas. Atuo como perito nomeado nas regiões da Justiça do Trabalho do TRT 5ª, 6ª e 17ª desde 2021, com expertise desenvolvida em mais de 2.000 laudos periciais desde 2013.</p>
+                        <p class="mb-4 text-gray-700 text-lg">Minha trajetória nasceu da prática em escritórios de perícia, onde vivenciei a importância da precisão contábil. Tive a honra de aprender com mestres como Renato Otero, John Hiroshi Iano, Kleber Buratiero e Rafael Baldivia.</p>
+                        <p class="text-lg">Meu compromisso é entregar laudos objetivos, fundamentados e precisos, sempre com observância ao julgado e à necessidade do MM. Juízo.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="diferenciais" class="py-16 bg-slate-100">
+        <section id="diferenciais" class="py-20 bg-slate-50">
             <div class="container mx-auto px-6 text-center">
-                <h3 class="text-3xl font-bold mb-10 text-navy">Promessa e Benefícios</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Autoridade Técnica</h4>
-                        <p>Grande volume de elogios e especialização em casos de alta complexidade (Correios, grandes bancos) envolvendo horas extras, diferenças salariais e PLR.</p>
+                <h3 class="text-3xl font-bold mb-12 text-navy">Promessa e Benefícios</h3>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <div class="text-gold text-4xl mb-4">⚖️</div>
+                        <h4 class="text-xl font-bold mb-3 text-navy">Autoridade Técnica</h4>
+                        <p class="text-gray-600">Especialização em casos de alta complexidade envolvendo grandes litigantes nacionais e cálculos de diferenças salariais.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Agilidade e Pontualidade</h4>
-                        <p>Todas as perícias são concluídas e entregues em até 30 dias, sem exceção, garantindo respeito ao tempo processual do juízo.</p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <div class="text-gold text-4xl mb-4">⏱️</div>
+                        <h4 class="text-xl font-bold mb-3 text-navy">Agilidade</h4>
+                        <p class="text-gray-600">Compromisso com a pontualidade. Entregas em até 30 dias, respeitando rigorosamente o tempo processual.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h4 class="text-xl font-bold mb-2 text-gold">Segurança e Clareza</h4>
-                        <p>Padronização técnica, redação clara, resposta precisa aos quesitos e total cumprimento dos parâmetros da Vara, proporcionando segurança e transparência.</p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <div class="text-gold text-4xl mb-4">🔍</div>
+                        <h4 class="text-xl font-bold mb-3 text-navy">Segurança</h4>
+                        <p class="text-gray-600">Padronização técnica e redação clara, respondendo precisamente a todos os quesitos do juízo.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="metodo" class="py-16">
+        <section id="metodo" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-10 text-navy">Método de Trabalho – ALERR</h3>
-                <p class="text-center max-w-3xl mx-auto mb-12">Meu processo é minucioso, técnico e orientado para a excelência, garantindo a máxima precisão ao juízo através de uma dupla verificação antes da entrega.</p>
-                <div class="relative">
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-300 -translate-y-1/2"></div>
-                    <div class="grid md:grid-cols-5 gap-8 text-center relative">
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">A</div>
-                            <h4 class="font-bold mt-4">Análise</h4>
-                            <p class="text-sm mt-1">Leitura dos autos, identificação das peças-chave e compreensão do contexto.</p>
+                <h3 class="text-3xl font-bold text-center mb-12 text-navy">Método de Trabalho – ALERR</h3>
+                <div class="relative max-w-5xl mx-auto">
+                    <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gold/30 -translate-y-1/2"></div>
+                    <div class="grid lg:grid-cols-5 gap-8 text-center">
+                        <div class="bg-white p-6 rounded-lg relative z-10 shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-navy text-gold flex items-center justify-center text-xl font-bold mx-auto mb-4">A</div>
+                            <h4 class="font-bold text-navy">Análise</h4>
+                            <p class="text-sm text-gray-500 mt-2">Leitura técnica dos autos e identificação de peças-chave.</p>
                         </div>
-                        <div class="flex flex-col items-center">
-                            <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">L</div>
-                            <h4 class="font-bold mt-4">Levantamento</h4>
-                            <p class="text-sm mt-1">Compilação de documentos, recibos, cartões de ponto e informações relevantes.</p>
+                        <div class="bg-white p-6 rounded-lg relative z-10 shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-navy text-gold flex items-center justify-center text-xl font-bold mx-auto mb-4">L</div>
+                            <h4 class="font-bold text-navy">Levantamento</h4>
+                            <p class="text-sm text-gray-500 mt-2">Compilação minuciosa de documentos e variáveis financeiras.</p>
                         </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">E</div>
-                            <h4 class="font-bold mt-4">Elaboração</h4>
-                            <p class="text-sm mt-1">Planilhamento detalhado, anotação de períodos, convenções e variáveis.</p>
+                        <div class="bg-white p-6 rounded-lg relative z-10 shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-navy text-gold flex items-center justify-center text-xl font-bold mx-auto mb-4">E</div>
+                            <h4 class="font-bold text-navy">Elaboração</h4>
+                            <p class="text-sm text-gray-500 mt-2">Planilhamento detalhado e aplicação de índices corretivos.</p>
                         </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">R</div>
-                            <h4 class="font-bold mt-4">Revisão</h4>
-                            <p class="text-sm mt-1">Cálculo no PJe-Calc, aplicação de parâmetros e conferência de dados.</p>
+                        <div class="bg-white p-6 rounded-lg relative z-10 shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-navy text-gold flex items-center justify-center text-xl font-bold mx-auto mb-4">R</div>
+                            <h4 class="font-bold text-navy">Revisão</h4>
+                            <p class="text-sm text-gray-500 mt-2">Processamento no PJe-Calc e validação de parâmetros.</p>
                         </div>
-                        <div class="flex flex-col items-center">
-                             <div class="w-16 h-16 rounded-full bg-gold text-white flex items-center justify-center text-2xl font-bold z-10">R</div>
-                            <h4 class="font-bold mt-4">Revisão Final</h4>
-                            <p class="text-sm mt-1">Dupla verificação dos resultados e coerência jurídica antes da entrega.</p>
+                        <div class="bg-white p-6 rounded-lg relative z-10 shadow-sm border border-gray-100">
+                            <div class="w-12 h-12 rounded-full bg-navy text-gold flex items-center justify-center text-xl font-bold mx-auto mb-4">R</div>
+                            <h4 class="font-bold text-navy">Revisão Final</h4>
+                            <p class="text-sm text-gray-500 mt-2">Dupla verificação de integridade antes do protocolo final.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section id="casos" class="py-16 bg-slate-100">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Casos de Sucesso e Provas</h3>
-                <p class="text-center max-w-3xl mx-auto mb-10">A robustez do meu trabalho é comprovada por nomeações em processos envolvendo grandes litigantes nacionais.</p>
-                <div id="gallery-filters" class="flex justify-center space-x-2 md:space-x-4 mb-8 flex-wrap">
-                    <button class="filter-btn bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold mb-2">Todos</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Nomeação">Nomeações</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Planilha">Planilhas PJe-Calc</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Laudo">Laudos</button>
-                    <button class="filter-btn bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-semibold mb-2" data-category="Documento">Documentos</button>
-                </div>
 
-                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <section id="casos" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-10 text-navy">Provas e Casos de Sucesso</h3>
+                <div id="gallery-filters" class="flex justify-center space-x-2 md:space-x-4 mb-10 flex-wrap">
+                    <button class="filter-btn bg-gold text-white px-6 py-2 rounded-full text-sm font-semibold mb-2">Todos</button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Nomeação">Nomeações</button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Planilha">PJe-Calc</button>
+                </div>
+                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Gallery via JS -->
                 </div>
             </div>
         </section>
 
-        <section id="documentos" class="py-16">
+        <section id="documentos" class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Documentos para Download</h3>
-                <p class="text-center max-w-2xl mx-auto mb-12">Clique nos botões abaixo para visualizar os ficheiros na pasta imagens/PDFs.</p>
-                
+                <h3 class="text-3xl font-bold text-center mb-12 text-navy text-center">Visualização de Documentos</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    <!-- Currículo -->
-                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <span class="text-4xl mb-4">📄</span>
-                        <h4 class="text-lg font-bold text-navy mb-2">Currículo</h4>
-                        <a href="imagens/PDFs/curriculo_bruno_gomes.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
+                    
+                    <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
+                        <div class="text-4xl mb-4">📄</div>
+                        <h4 class="font-bold text-navy mb-4">Currículo Profissional</h4>
+                        <button onclick="openPDF('images/pdfs/curriculo_bruno_gomes.pdf', 'Currículo Profissional')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full">Visualizar</button>
                     </div>
 
-                    <!-- Laudo 1 -->
-                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <span class="text-4xl mb-4">📋</span>
-                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 1</h4>
-                        <a href="imagens/PDFs/modelo_laudo_pericial.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h4 class="font-bold text-navy mb-4">Modelo Laudo 1</h4>
+                        <button onclick="openPDF('images/pdfs/modelo_laudo_pericial.pdf', 'Modelo Laudo Pericial 1')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full">Visualizar</button>
                     </div>
 
-                    <!-- Laudo 2 -->
-                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <span class="text-4xl mb-4">📋</span>
-                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 2</h4>
-                        <a href="imagens/PDFs/modelo_laudo_pericial.pdf_2" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h4 class="font-bold text-navy mb-4">Modelo Laudo 2</h4>
+                        <button onclick="openPDF('images/pdfs/modelo_laudo_pericial.pdf_2', 'Modelo Laudo Pericial 2')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full">Visualizar</button>
                     </div>
 
-                    <!-- Laudo 3 -->
-                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
-                        <span class="text-4xl mb-4">📋</span>
-                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 3</h4>
-                        <a href="imagens/PDFs/modelo_laudo_pericial.pdf_3" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Abrir PDF</a>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
+                        <div class="text-4xl mb-4">📋</div>
+                        <h4 class="font-bold text-navy mb-4">Modelo Laudo 3</h4>
+                        <button onclick="openPDF('images/pdfs/modelo_laudo_pericial.pdf_3', 'Modelo Laudo Pericial 3')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full">Visualizar</button>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-navy text-white py-8 text-center">
+    <footer class="bg-navy text-white py-12 text-center">
         <div class="container mx-auto px-6">
-            <p class="font-bold text-xl">Bruno Gomes dos Santos</p>
+            <p class="font-bold text-xl mb-2">Bruno Gomes dos Santos</p>
             <p class="text-gold">Perito Contábil Trabalhista | CRC 1SP 338.009/O-5</p>
-            <p class="mt-4 text-sm text-gray-400">Atuação especializada nos TRT 5ª, 6ª e 17ª Regiões.</p>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-gray-500 text-sm">
+                &copy; 2024 - Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
-    <div id="modal" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-4">
-        <div class="bg-white p-2 rounded-lg max-w-4xl w-full mx-auto relative">
-            <div class="flex justify-between items-center p-2 border-b">
-                <h5 id="modal-caption" class="text-sm font-bold text-navy"></h5>
-                <button id="modal-close" class="text-2xl font-bold leading-none">&times;</button>
+    <!-- PDF Viewer Modal -->
+    <div id="pdf-modal" class="hidden fixed inset-0 z-[100] modal-backdrop flex flex-col items-center justify-center p-4">
+        <div class="bg-white w-full max-w-6xl h-[90vh] rounded-lg shadow-2xl flex flex-col overflow-hidden">
+            <div class="bg-navy p-4 text-white flex justify-between items-center">
+                <h5 id="pdf-title" class="font-bold">Visualização do Documento</h5>
+                <button onclick="closePDF()" class="text-white hover:text-gold text-3xl leading-none">&times;</button>
             </div>
-            <div class="overflow-auto max-h-[80vh] flex justify-center">
-                <img id="modal-img" src="" class="max-w-full h-auto object-contain">
+            <div class="flex-grow bg-gray-200 relative">
+                <iframe id="pdf-iframe" src="" class="w-full h-full border-none"></iframe>
+            </div>
+            <div class="p-3 bg-gray-50 text-right">
+                <button onclick="closePDF()" class="bg-gray-400 text-white px-6 py-2 rounded hover:bg-gray-500 font-bold transition-colors">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Gallery Modal -->
+    <div id="img-modal" class="hidden fixed inset-0 z-[100] modal-backdrop flex items-center justify-center p-4">
+        <div class="bg-white p-2 rounded-lg max-w-4xl w-full mx-auto relative shadow-2xl">
+            <div class="flex justify-between items-center p-3 border-b border-gray-100">
+                <h5 id="img-caption" class="text-sm font-bold text-navy"></h5>
+                <button onclick="closeImg()" class="text-2xl font-bold leading-none hover:text-gold">&times;</button>
+            </div>
+            <div class="p-2">
+                <img id="img-display" src="" class="w-full max-h-[75vh] object-contain mx-auto">
             </div>
         </div>
     </div>
 
     <script>
+        // PDF Functions
+        function openPDF(url, title) {
+            document.getElementById('pdf-title').textContent = title;
+            document.getElementById('pdf-iframe').src = url;
+            document.getElementById('pdf-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePDF() {
+            document.getElementById('pdf-modal').classList.add('hidden');
+            document.getElementById('pdf-iframe').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Image Modal Functions
+        function openImg(src, caption) {
+            document.getElementById('img-display').src = src;
+            document.getElementById('img-caption').textContent = caption;
+            document.getElementById('img-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImg() {
+            document.getElementById('img-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Gallery Rendering
         document.addEventListener('DOMContentLoaded', function() {
             const galleryData = [
-                { src: 'imagens/nomeacao1.png', category: 'Nomeação', caption: 'Nomeação Judicial Exemplo 1' },
-                { src: 'imagens/nomeacao2.png', category: 'Nomeação', caption: 'Nomeação Judicial Exemplo 2' },
-                { src: 'imagens/nomeacao3.png', category: 'Nomeação', caption: 'Nomeação Judicial Exemplo 3' },
-                { src: 'imagens/nomeacao4.png', category: 'Nomeação', caption: 'Nomeação Judicial Exemplo 4' },
-                { src: 'imagens/imagem_pje.png', category: 'Planilha', caption: 'Planilha PJe-Calc Exemplo' },
-                { src: 'imagens/imagem_pje2.png', category: 'Planilha', caption: 'Planilha PJe-Calc Exemplo 2' },
-                { src: 'imagens/anexo_laudo_pericial.png', category: 'Laudo', caption: 'Anexo de Laudo Pericial' },
-                { src: 'imagens/cartao_de_ponto.jpg', category: 'Documento', caption: 'Análise de Cartão de Ponto' }
+                { src: 'images/nomeacao1.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT - Exemplo 1' },
+                { src: 'images/nomeacao2.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT - Exemplo 2' },
+                { src: 'images/nomeacao3.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT - Exemplo 3' },
+                { src: 'images/nomeacao4.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT - Exemplo 4' },
+                { src: 'images/imagem_pje.png', category: 'Planilha', caption: 'PJe-Calc: Resumo do Cálculo' },
+                { src: 'images/imagem_pje2.png', category: 'Planilha', caption: 'PJe-Calc: Evolução Salarial' },
+                { src: 'images/anexo_laudo_pericial.png', category: 'Nomeação', caption: 'Publicação de Nomeação Pericial' },
+                { src: 'images/cartao_de_ponto.jpg', category: 'Planilha', caption: 'Análise Técnica de Cartões de Ponto' }
             ];
 
-            const gallery = document.getElementById('gallery');
+            const galleryContainer = document.getElementById('gallery');
             const filterBtns = document.querySelectorAll('.filter-btn');
-            const modal = document.getElementById('modal');
-            const modalImg = document.getElementById('modal-img');
-            const modalCaption = document.getElementById('modal-caption');
-            const modalClose = document.getElementById('modal-close');
 
             const renderGallery = (category) => {
-                gallery.innerHTML = '';
-                const filteredData = category === 'Todos' ? galleryData : galleryData.filter(item => item.category === category);
+                galleryContainer.innerHTML = '';
+                const filtered = category === 'Todos' ? galleryData : galleryData.filter(i => i.category === category);
                 
-                filteredData.forEach(item => {
+                filtered.forEach(item => {
                     const div = document.createElement('div');
-                    div.className = 'gallery-item cursor-pointer overflow-hidden rounded shadow-sm hover:shadow-md transition-shadow';
-                    div.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="w-full h-40 object-cover">`;
-                    div.onclick = () => { 
-                        modalImg.src = item.src; 
-                        modalCaption.textContent = item.caption;
-                        modal.classList.remove('hidden'); 
-                    };
-                    gallery.appendChild(div);
+                    div.className = 'gallery-item cursor-pointer overflow-hidden rounded-lg shadow-sm border border-gray-200 bg-white p-1';
+                    div.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="w-full h-48 object-cover rounded">`;
+                    div.onclick = () => openImg(item.src, item.caption);
+                    galleryContainer.appendChild(div);
                 });
             };
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-gold', 'text-white');
-                        b.classList.add('bg-white', 'text-gray-700');
-                    });
-                    btn.classList.remove('bg-white', 'text-gray-700');
-                    btn.classList.add('bg-gold', 'text-white');
+                    filterBtns.forEach(b => b.classList.replace('bg-gold', 'bg-white') & b.classList.replace('text-white', 'text-gray-700'));
+                    btn.classList.replace('bg-white', 'bg-gold');
+                    btn.classList.replace('text-gray-700', 'text-white');
                     renderGallery(btn.dataset.category || 'Todos');
                 });
             });
 
-            modalClose.onclick = () => modal.classList.add('hidden');
-            window.onclick = (e) => { if(e.target == modal) modal.classList.add('hidden'); };
-
             renderGallery('Todos');
 
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+
+            // Smooth nav active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(s => {
+                    if (pageYOffset >= s.offsetTop - 150) current = s.getAttribute('id');
+                });
+                navLinks.forEach(l => {
+                    l.classList.remove('active-link');
+                    if (l.getAttribute('href').includes(current)) l.classList.add('active-link');
+                });
             });
         });
     </script>
