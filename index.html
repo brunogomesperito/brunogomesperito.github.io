@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Professional Navy & Gold --><!-- Application Structure Plan: A single-page application with a fixed top navigation to allow busy court officials to quickly jump to key sections. The structure is thematic: 'Início' for a strong first impression, 'Sobre' for credibility, 'Diferenciais' for value proposition, 'Método' for process transparency, and 'Casos de Sucesso' for an an interactive proof gallery. This non-linear structure is designed for a professional audience that needs to find specific information (like proof of experience) quickly and efficiently. --><!-- Visualization & Content Choices: Report Info -> Goal -> Viz/Presentation -> Interaction -> Justification. 1. Credentials/History -> Build Trust -> Two-column text & image layout -> Static -> Clean, professional layout. 2. Benefits/Promise -> Highlight Value -> Icon-based grid -> Static -> Easily scannable benefits. 3. Work Method -> Show Process -> Numbered step-by-step visual flow using HTML/CSS -> Static -> Clearly illustrates a structured, reliable process. 4. Annexes/Proofs -> Provide Evidence -> Interactive Image Gallery -> User filters by category & clicks to view in a modal -> Prevents a long scroll, handled with Vanilla JS. --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><style>
+    <!-- Chosen Palette: Professional Navy & Gold --><!-- Application Structure Plan: A single-page application with a fixed top navigation to allow busy court officials to quickly jump to key sections. The structure is thematic: 'Início' for a strong first impression, 'Sobre' for credibility, 'Diferenciais' for value proposition, 'Método' for process transparency, 'Casos de Sucesso' for an interactive gallery, and 'Documentos' for downloadable assets. The documents section has been expanded to include additional sample reports. --><!-- Visualization & Content Choices: 1. Documents -> Provide Downloads -> Icon-based cards -> Button click -> Professional way to share CV and multiple sample reports (Laudos 1, 2, and 3). --><!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. --><style>
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #F7F9FC;
@@ -40,7 +40,7 @@
             background-color: rgba(0, 0, 0, 0.75);
         }
         @media print {
-            header, footer, #gallery-filters, #casos .gallery-item {
+            header, footer, #gallery-filters, #casos .gallery-item, #documentos {
                 display: none;
             }
             body {
@@ -80,6 +80,7 @@
                 <a href="#diferenciais" class="nav-link">Diferenciais</a>
                 <a href="#metodo" class="nav-link">Método</a>
                 <a href="#casos" class="nav-link">Casos de Sucesso</a>
+                <a href="#documentos" class="nav-link">Documentos</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -91,6 +92,7 @@
             <a href="#diferenciais" class="block py-2 px-4 text-sm nav-link">Diferenciais</a>
             <a href="#metodo" class="block py-2 px-4 text-sm nav-link">Método</a>
             <a href="#casos" class="block py-2 px-4 text-sm nav-link">Casos de Sucesso</a>
+            <a href="#documentos" class="block py-2 px-4 text-sm nav-link">Documentos</a>
         </div>
     </header>
 
@@ -192,6 +194,56 @@
                 </div>
 
                 <div id="gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Documents -->
+        <section id="documentos" class="py-16">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-4 text-navy">Documentos Disponíveis</h3>
+                <p class="text-center max-w-2xl mx-auto mb-12">Faça o download de materiais complementares para conhecer melhor minha formação e qualidade técnica.</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                    <!-- CV Card -->
+                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-gold text-xl">📄</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy mb-2">Currículo</h4>
+                        <p class="text-xs text-gray-600 mb-6">Formação académica e histórico profissional completo.</p>
+                        <a href="pdfs/curriculo_bruno_gomes.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                    </div>
+
+                    <!-- Sample Work Card 1 -->
+                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-gold text-xl">📋</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 1</h4>
+                        <p class="text-xs text-gray-600 mb-6">Exemplo fundamentado demonstrando o rigor técnico aplicado.</p>
+                        <a href="pdfs/modelo_laudo_pericial.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                    </div>
+
+                    <!-- Sample Work Card 2 -->
+                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-gold text-xl">📋</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 2</h4>
+                        <p class="text-xs text-gray-600 mb-6">Segunda demonstração de metodologia e análise técnica.</p>
+                        <a href="pdfs/modelo_laudo_pericial_2.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                    </div>
+
+                    <!-- Sample Work Card 3 -->
+                    <div class="bg-white border-t-4 border-gold p-6 rounded-lg shadow-lg flex flex-col items-center text-center justify-between">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-4">
+                            <span class="text-gold text-xl">📋</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-navy mb-2">Modelo Laudo 3</h4>
+                        <p class="text-xs text-gray-600 mb-6">Terceiro exemplo de peça pericial para consulta.</p>
+                        <a href="pdfs/modelo_laudo_pericial_3.pdf" target="_blank" class="w-full bg-navy text-white font-bold py-2 rounded hover:bg-slate-800 transition-colors text-sm">Visualizar</a>
+                    </div>
                 </div>
             </div>
         </section>
