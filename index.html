@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Gomes - Perito Contábil</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="Imagens/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,14 +61,14 @@
     <header id="header" class="bg-navy text-white p-4 fixed w-full top-0 z-50 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#inicio" class="flex items-center">
-                <img src="logotipo.png" alt="Bruno Gomes Logotipo" class="h-8 md:h-10" onerror="this.src='https://via.placeholder.com/150x50?text=Bruno+Gomes'">
+                <img src="Imagens/logotipo.png" alt="Bruno Gomes Logotipo" class="h-8 md:h-10" onerror="this.src='https://via.placeholder.com/150x50?text=Bruno+Gomes'">
             </a>
             <nav class="hidden lg:flex space-x-6">
                 <a href="#inicio" class="nav-link active-link">Início</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
-                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#casos" class="nav-link">Nomeações</a>
                 <a href="#metodo" class="nav-link">Método</a>
-                <a href="#casos" class="nav-link">Casos de Sucesso</a>
+                <a href="#diferenciais" class="nav-link">Compromissos</a>
                 <a href="#documentos" class="nav-link">Documentos</a>
                 <a href="#certificados" class="nav-link">Certificados</a>
             </nav>
@@ -79,9 +79,9 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-navy">
             <a href="#inicio" class="block py-2 px-4 text-sm nav-link">Início</a>
             <a href="#sobre" class="block py-2 px-4 text-sm nav-link">Sobre</a>
-            <a href="#diferenciais" class="block py-2 px-4 text-sm nav-link">Diferenciais</a>
+            <a href="#casos" class="block py-2 px-4 text-sm nav-link">Nomeações</a>
             <a href="#metodo" class="block py-2 px-4 text-sm nav-link">Método</a>
-            <a href="#casos" class="block py-2 px-4 text-sm nav-link">Casos de Sucesso</a>
+            <a href="#diferenciais" class="block py-2 px-4 text-sm nav-link">Compromissos</a>
             <a href="#documentos" class="block py-2 px-4 text-sm nav-link">Documentos</a>
             <a href="#certificados" class="block py-2 px-4 text-sm nav-link">Certificados</a>
         </div>
@@ -90,16 +90,11 @@
     <main>
         <section id="inicio" class="pt-32 pb-16 bg-navy text-white text-center">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl md:text-5xl font-bold">Bruno Gomes</h2>
-                <div class="mt-4 flex flex-col md:flex-row justify-center items-center gap-4 text-gold font-semibold text-lg md:text-xl">
-                    <span class="bg-gold/10 px-4 py-2 rounded-lg border border-gold/30">Perito Contábil</span>
-                    <span class="hidden md:inline">•</span>
-                    <span class="bg-gold/10 px-4 py-2 rounded-lg border border-gold/30">CRC 1SP 338.009/O-5</span>
-                    <span class="hidden md:inline">•</span>
-                    <span class="bg-gold/10 px-4 py-2 rounded-lg border border-gold/30 shadow-[0_0_15px_rgba(212,175,55,0.4)]">CNPC nº 8.383</span>
-                </div>
-                <p class="mt-8 max-w-3xl mx-auto italic text-xl text-gray-300">"Precisão Contábil, Excelência em Justiça."</p>
-                <p class="mt-4 max-w-3xl mx-auto text-gray-400 text-sm md:text-base">Atuação especializada em Cálculos Trabalhistas e Liquidação Judicial para as Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Bruno Gomes dos Santos</h2>
+                <p class="text-xl md:text-2xl mt-2 text-gold">Perito Contábil</p>
+                <p class="text-base md:text-lg mt-1 text-gold">CRC 1SP 338.009/O-5 | CNPC nº 8.383</p>
+                <p class="mt-6 max-w-3xl mx-auto italic text-lg text-gray-300">"Precisão Contábil, Excelência em Justiça."</p>
+                <p class="mt-4 max-w-3xl mx-auto text-gray-400 text-sm md:text-base">Atuação especializada em Cálculos e Liquidação Judicial para as Varas do Trabalho do TRT 5ª, 6ª e 17ª Regiões.</p>
             </div>
         </section>
 
@@ -107,45 +102,58 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-5 gap-12 items-center">
                     <div class="md:col-span-2">
-                        <img src="profile.jpeg" alt="Bruno Gomes" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm" onerror="this.src='https://via.placeholder.com/400x500?text=Bruno+Gomes'">
+                        <img src="Imagens/profile.jpeg" alt="Bruno Gomes" class="rounded-lg shadow-2xl mx-auto w-full max-w-sm" onerror="this.src='https://via.placeholder.com/400x500?text=Bruno+Gomes'">
                     </div>
-                    <div class="md:col-span-3 text-justify">
-                        <h3 class="text-3xl font-bold mb-6 text-navy">Credenciais e História</h3>
-                        
-                        <div class="bg-slate-50 border-l-4 border-gold p-5 mb-6 rounded-r-lg shadow-sm">
-                            <h4 class="font-bold text-navy text-lg mb-3">Registro no Cadastro Nacional de Peritos Contábeis, CNPC nº 8.383</h4>
-                            <p class="text-sm text-gray-700 mb-2">O CNPC é o cadastro mantido pelo Conselho Federal de Contabilidade que reúne os contadores habilitados ao exercício da perícia contábil. A inscrição não é automática. Depende de registro ativo no CRC e de aprovação no Exame de Qualificação Técnica, prova específica aplicada pelo CFC sobre perícia contábil, e exige renovação periódica mediante comprovação de educação continuada.</p>
-                            <p class="text-sm text-gray-700 mb-2">Na prática, o cadastro atesta ao juízo e às partes que o profissional foi tecnicamente avaliado para a função de perito, e não apenas que possui diploma de contador. É o parâmetro que os tribunais utilizam para verificar a habilitação de quem elabora laudos e cálculos judiciais.</p>
-                            <p class="text-sm text-gray-700">A esse registro somam-se a experiência prática de cinco anos em perícia contábil trabalhista, com elaboração de laudos, cálculos de liquidação e esclarecimentos, a pós-graduação em perícia e auditoria contábil e certificações complementares na área.</p>
+                    <div class="md:col-span-3">
+                        <h3 class="text-3xl font-bold mb-8 text-navy">Credenciais e História</h3>
+
+                        <!-- Faixa de números -->
+                        <div class="grid grid-cols-3 gap-4 mb-8 border-y border-gray-200 py-6">
+                            <div>
+                                <div class="text-3xl md:text-4xl font-bold text-navy">2.000<span class="text-gold">+</span></div>
+                                <p class="text-xs md:text-sm text-gray-600 mt-1">laudos periciais elaborados desde 2013</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl md:text-4xl font-bold text-navy">2021</div>
+                                <p class="text-xs md:text-sm text-gray-600 mt-1">primeiro ano como perito nomeado</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl md:text-4xl font-bold text-navy">3</div>
+                                <p class="text-xs md:text-sm text-gray-600 mt-1">Regiões da Justiça do Trabalho: TRT 5ª, 6ª e 17ª</p>
+                            </div>
                         </div>
 
-                        <p class="mb-4 text-lg">Sou perito contábil, graduado e pós-graduado em perícia e auditoria pela Universidade São Judas. Atuo como perito nomeado nas regiões da Justiça do Trabalho do TRT 5ª, 6ª e 17ª desde 2021, com expertise desenvolvida em mais de 2.000 laudos periciais desde 2013.</p>
-                        <p class="mb-4 text-gray-700 text-lg">Minha trajetória nasceu da prática em escritórios de perícia, onde vivenciei a importância da precisão contábil ao lado de grandes mestres da área.</p>
-                        <p class="text-lg font-medium text-navy">Meu compromisso é entregar laudos objetivos, fundamentados e precisos, sempre com observância ao julgado e à necessidade do MM. Juízo.</p>
+                        <!-- Destaque CNPC -->
+                        <div class="bg-navy text-white rounded-lg p-6 mb-8 border-l-4 border-gold">
+                            <div class="flex items-baseline gap-3 flex-wrap mb-3">
+                                <span class="text-2xl font-bold text-gold">CNPC nº 8.383</span>
+                                <span class="text-xs text-gray-400">Conselho Federal de Contabilidade</span>
+                            </div>
+                            <p class="text-sm md:text-base text-gray-300">Integro o Cadastro Nacional de Peritos Contábeis, reservado aos profissionais aprovados no Exame de Qualificação Técnica do CFC, prova específica para a atividade pericial. O cadastro é mantido por educação continuada e habilita a atuação como perito do juízo em qualquer ramo da Justiça.</p>
+                            <p class="text-xs text-gray-400 mt-3">Registro profissional: CRC 1SP 338.009/O-5</p>
+                        </div>
+
+                        <div class="text-justify">
+                            <p class="mb-4 text-lg">Sou perito contábil, graduado e pós-graduado em perícia e auditoria pela Universidade São Judas. Minha trajetória nasceu da prática em escritórios de perícia, onde vivenciei a importância da precisão contábil ao lado de grandes mestres da área.</p>
+                            <p class="text-lg font-medium text-navy border-l-4 border-gold pl-4">Meu compromisso é entregar laudos objetivos, fundamentados e precisos, sempre com observância ao julgado e à necessidade do MM. Juízo.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="diferenciais" class="py-20 bg-slate-50">
-            <div class="container mx-auto px-6 text-center">
-                <h3 class="text-3xl font-bold mb-12 text-navy">Diferenciais de Atuação</h3>
-                <div class="grid md:grid-cols-3 gap-10">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
-                        <div class="text-gold text-4xl mb-4 font-bold">01</div>
-                        <h4 class="text-xl font-bold mb-3 text-navy">Autoridade Técnica</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Especialização em casos complexos de grandes bancos e empresas nacionais, envolvendo horas extras e diferenças salariais.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
-                        <div class="text-gold text-4xl mb-4 font-bold">02</div>
-                        <h4 class="text-xl font-bold mb-3 text-navy">Agilidade Processual</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Entrega de laudos em até 15 dias, garantindo que o cronograma da vara seja respeitado sem atrasos.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
-                        <div class="text-gold text-4xl mb-4 font-bold">03</div>
-                        <h4 class="text-xl font-bold mb-3 text-navy">Segurança Jurídica</h4>
-                        <p class="text-gray-600 text-sm md:text-base">Laudos com redação clara, resposta objetiva aos quesitos e total fidelidade aos parâmetros da sentença.</p>
-                    </div>
+        <section id="casos" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl font-bold text-center mb-3 text-navy">Nomeações Judiciais</h3>
+                <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Nomeações recebidas nas Varas do Trabalho, cálculos elaborados no PJe-Calc e anexos de laudos, com os dados das partes preservados.</p>
+                <div id="gallery-filters" class="flex justify-center space-x-2 md:space-x-4 mb-10 flex-wrap">
+                    <button class="filter-btn bg-gold text-white px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Todos">Todos</button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Nomeação">Nomeações</button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Planilha">PJe-Calc</button>
+                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Laudo">Laudos</button>
+                </div>
+                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Gallery via JS -->
                 </div>
             </div>
         </section>
@@ -185,17 +193,23 @@
             </div>
         </section>
 
-        <section id="casos" class="py-20 bg-slate-100">
-            <div class="container mx-auto px-6">
-                <h3 class="text-3xl font-bold text-center mb-10 text-navy">Provas de Experiência</h3>
-                <div id="gallery-filters" class="flex justify-center space-x-2 md:space-x-4 mb-10 flex-wrap">
-                    <button class="filter-btn bg-gold text-white px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Todos">Todos</button>
-                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Nomeação">Nomeações</button>
-                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Planilha">PJe-Calc</button>
-                    <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full text-sm font-semibold mb-2" data-category="Homologacao">Homologações</button>
-                </div>
-                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <!-- Gallery via JS -->
+        <section id="diferenciais" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-4 text-navy">Compromissos com o Juízo</h3>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">O que a vara pode esperar de cada trabalho que recebo.</p>
+                <div class="grid md:grid-cols-3 gap-10 text-left">
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h4 class="text-xl font-bold mb-3 text-navy">Prazo cumprido</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Laudos entregues dentro do prazo fixado, com pedido de dilação apenas quando a complexidade da liquidação efetivamente exigir, sempre antes do vencimento.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h4 class="text-xl font-bold mb-3 text-navy">Cálculo rastreável</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Memória de cálculo em que cada verba pode ser conferida até o item da sentença que a determinou, com apuração no PJe-Calc e planilhas de apoio anexadas.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg border-b-4 border-gold">
+                        <h4 class="text-xl font-bold mb-3 text-navy">Resposta aos quesitos</h4>
+                        <p class="text-gray-600 text-sm md:text-base">Quesitos respondidos um a um, em linguagem clara, sem extrapolar os limites do julgado nem antecipar matéria reservada ao MM. Juízo.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,29 +218,29 @@
             <div class="container mx-auto px-6 text-center">
                 <h3 class="text-3xl font-bold mb-12 text-navy text-center">Documentos de Atuação</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                    
+
                     <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
                         <div class="text-4xl mb-4">📄</div>
                         <h4 class="font-bold text-navy mb-4">Currículo Profissional</h4>
-                        <button onclick="openPDF('curriculo.pdf', 'Currículo Profissional')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/curriculo.pdf', 'Currículo Profissional')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
                     </div>
 
                     <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
                         <div class="text-4xl mb-4">📋</div>
                         <h4 class="font-bold text-navy mb-4">Modelo Laudo 1</h4>
-                        <button onclick="openPDF('laudo1.pdf', 'Modelo Laudo Pericial 1')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/laudo1.pdf', 'Modelo Laudo Pericial 1')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
                     </div>
 
                     <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
                         <div class="text-4xl mb-4">📋</div>
                         <h4 class="font-bold text-navy mb-4">Modelo Laudo 2</h4>
-                        <button onclick="openPDF('laudo2.pdf', 'Modelo Laudo Pericial 2')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/laudo2.pdf', 'Modelo Laudo Pericial 2')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
                     </div>
 
                     <div class="bg-slate-50 p-8 rounded-xl border border-gray-200 text-center hover:shadow-xl transition-all">
                         <div class="text-4xl mb-4">📋</div>
                         <h4 class="font-bold text-navy mb-4">Modelo Laudo 3</h4>
-                        <button onclick="openPDF('laudo3.pdf', 'Modelo Laudo Pericial 3')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/laudo3.pdf', 'Modelo Laudo Pericial 3')" class="bg-navy text-white px-4 py-2 rounded font-bold hover:bg-slate-800 w-full transition-colors">Visualizar</button>
                     </div>
 
                 </div>
@@ -237,51 +251,50 @@
             <div class="container mx-auto px-6">
                 <h3 class="text-3xl font-bold text-center mb-12 text-navy">Certificações e Formação</h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                    <!-- Gerando 9 cards de certificados -->
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 01</h4>
-                        <button onclick="openPDF('certificado1.pdf', 'Certificado 01')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado1.pdf', 'Certificado 01')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 02</h4>
-                        <button onclick="openPDF('certificado2.pdf', 'Certificado 02')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado2.pdf', 'Certificado 02')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 03</h4>
-                        <button onclick="openPDF('certificado3.pdf', 'Certificado 03')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado3.pdf', 'Certificado 03')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 04</h4>
-                        <button onclick="openPDF('certificado4.pdf', 'Certificado 04')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado4.pdf', 'Certificado 04')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 05</h4>
-                        <button onclick="openPDF('certificado5.pdf', 'Certificado 05')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado5.pdf', 'Certificado 05')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 06</h4>
-                        <button onclick="openPDF('certificado6.pdf', 'Certificado 06')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado6.pdf', 'Certificado 06')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 07</h4>
-                        <button onclick="openPDF('certificado7.pdf', 'Certificado 07')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado7.pdf', 'Certificado 07')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 08</h4>
-                        <button onclick="openPDF('certificado8.pdf', 'Certificado 08')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado8.pdf', 'Certificado 08')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 text-center hover:border-gold transition-all">
                         <div class="text-3xl mb-3 text-gold">🏅</div>
                         <h4 class="text-sm font-bold text-navy mb-3">Certificado 09</h4>
-                        <button onclick="openPDF('certificado9.pdf', 'Certificado 09')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
+                        <button onclick="openPDF('Imagens/PDFs/certificado9.pdf', 'Certificado 09')" class="text-xs bg-navy text-white px-3 py-1 rounded hover:bg-slate-800">Visualizar</button>
                     </div>
                 </div>
             </div>
@@ -290,7 +303,7 @@
 
     <footer class="bg-navy text-white py-12 text-center">
         <div class="container mx-auto px-6">
-            <p class="font-bold text-xl mb-2">Bruno Gomes</p>
+            <p class="font-bold text-xl mb-2">Bruno Gomes dos Santos</p>
             <p class="text-gold">Perito Contábil | CRC 1SP 338.009/O-5 | CNPC nº 8.383</p>
             <div class="mt-8 pt-8 border-t border-gray-700 text-gray-500 text-sm">
                 &copy; 2026: Todos os direitos reservados.
@@ -356,19 +369,25 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Renderização da Galeria de Imagens (Selecionamos apenas 10 exemplos chaves para não ficar extenso)
+        // Renderização da Galeria
         document.addEventListener('DOMContentLoaded', function() {
             const galleryData = [
-                { src: 'nomeacao1.png', category: 'Nomeação', caption: 'Nomeação Banco Santander' },
-                { src: 'nomeacao2.png', category: 'Nomeação', caption: 'Nomeação Correios' },
-                { src: 'nomeacao3.png', category: 'Nomeação', caption: 'Nomeação Caixa Econômica' },
-                { src: 'nomeacao4.png', category: 'Nomeação', caption: 'Nomeação Banco do Brasil' },
-                { src: 'imagem_pje.png', category: 'Planilha', caption: 'Planilha PJe-Calc - Correios' },
-                { src: 'imagem_pje2.png', category: 'Planilha', caption: 'Evolução Salarial - Planilha' },
-                { src: 'anexo_laudo_pericial.png', category: 'Planilha', caption: 'Demonstrativo de Evolução Salarial' },
-                { src: 'cartao_de_ponto.jpg', category: 'Planilha', caption: 'Análise de Jornada' },
-                { src: 'cartao_de_ponto_2.jpg', category: 'Planilha', caption: 'Análise de Horas Extras' },
-                { src: 'nomeacao5.png', category: 'Homologacao', caption: 'Homologação TRT' }
+                { src: 'Imagens/nomeacao1.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 1' },
+                { src: 'Imagens/nomeacao2.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 2' },
+                { src: 'Imagens/nomeacao3.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 3' },
+                { src: 'Imagens/nomeacao4.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 4' },
+                { src: 'Imagens/nomeacao5.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 5' },
+                { src: 'Imagens/nomeacao6.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 6' },
+                { src: 'Imagens/nomeacao7.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 7' },
+                { src: 'Imagens/nomeacao8.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 8' },
+                { src: 'Imagens/nomeacao9.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 9' },
+                { src: 'Imagens/nomeacao10.png', category: 'Nomeação', caption: 'Nomeação Judicial TRT: Exemplo 10' },
+                { src: 'Imagens/imagem_pje.png', category: 'Planilha', caption: 'PJe-Calc: Resumo do Cálculo' },
+                { src: 'Imagens/imagem_pje2.png', category: 'Planilha', caption: 'PJe-Calc: Evolução Salarial' },
+                { src: 'Imagens/cartao_de_ponto.jpg', category: 'Planilha', caption: 'Análise de Registros de Jornada 1' },
+                { src: 'Imagens/cartao_de_ponto_2.jpg', category: 'Planilha', caption: 'Análise de Registros de Jornada 2' },
+                { src: 'Imagens/anexo_laudo_pericial.png', category: 'Laudo', caption: 'Anexo do Laudo Pericial 1' },
+                { src: 'Imagens/anexo_laudo_pericial2.png', category: 'Laudo', caption: 'Anexo do Laudo Pericial 2' }
             ];
 
             const galleryContainer = document.getElementById('gallery');
@@ -377,11 +396,11 @@
             const renderGallery = (category) => {
                 galleryContainer.innerHTML = '';
                 const filtered = category === 'Todos' ? galleryData : galleryData.filter(i => i.category === category);
-                
+
                 filtered.forEach(item => {
                     const div = document.createElement('div');
                     div.className = 'gallery-item cursor-pointer overflow-hidden rounded-lg shadow-sm border border-gray-200 bg-white p-1';
-                    div.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="w-full h-48 object-cover rounded" onerror="this.src='https://via.placeholder.com/300x200?text=Imagem+N%C3%A3o+Encontrada'">`;
+                    div.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="w-full h-48 object-cover rounded" onerror="this.src='https://via.placeholder.com/300x200?text=Imagem+Pendente'">`;
                     div.onclick = () => openImg(item.src, item.caption);
                     galleryContainer.appendChild(div);
                 });
